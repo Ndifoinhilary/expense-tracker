@@ -3,7 +3,7 @@ package com.hilaryd.expense_track_app.services.impl;
 import com.hilaryd.expense_track_app.dto.CategoryDto;
 import com.hilaryd.expense_track_app.entity.Category;
 import com.hilaryd.expense_track_app.exception.ResouceNotFoundException;
-import com.hilaryd.expense_track_app.mapper.CategoryMapper;
+//import com.hilaryd.expense_track_app.mapper.CategoryMapper;
 import com.hilaryd.expense_track_app.repository.CategoryRepository;
 import com.hilaryd.expense_track_app.services.CategoryService;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
     private CategoryRepository categoryRepository;
     private ModelMapper modelMapper;

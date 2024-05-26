@@ -52,14 +52,14 @@ public class ExpenseServiceImpl implements ExpenseServices {
 //        getting the expense
         var expense = expenseRepository.findById(id).orElseThrow(() -> new ResouceNotFoundException("The expense does not exitst"));
 
-        expense.setAmount(expenseDto.amount());
-        expense.setLocalDateTime(expenseDto.localDate());
+        expense.setAmount(expenseDto.getAmount());
+        expense.setLocalDateTime(expenseDto.getLocalDateTime());
 //       first check if category is not null
 
-        if (expenseDto.category() != null){
+        if (expenseDto.getCategory() != null){
 //            get the category id
 
-            var category = categoryRepository.findById(expenseDto.category().id())
+            var category = categoryRepository.findById(expenseDto.getCategory().getId())
                     .orElseThrow(() -> new ResouceNotFoundException("The category does not exitst"));
 
 //            update the expense cateogry now
